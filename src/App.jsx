@@ -35,9 +35,7 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    updateExchangeRate();
-  }, [fromCurrency, toCurrency, amount]);
+
 
   return (
     <div className="container">
