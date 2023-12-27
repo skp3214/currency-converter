@@ -1,7 +1,7 @@
 # 💱 Currency Converter - React.js 🌐
 
 # Website Link
-[![CurrencyCOnv](https://img.shields.io/badge/Click_Here-App_Demo_Video_App-blue)](https://currency-converter-react-js-eight.vercel.app/)
+[![CurrencyCOnv](https://img.shields.io/badge/Click_Here-Currency_Converter-blue)](https://currency-converter-react-js-eight.vercel.app/)
 
 ## About  Project
 In Javascript Series, Shradha Khapra Made currency converter project using fetch API. I just changed that project in react js for learning purpose how things work in react.
