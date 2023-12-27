@@ -9,7 +9,7 @@ I wanted to know how dom-manipulation will take place when I will be changing it
 This project made by using api's to fetch country flaga and also currency converter exchange rate.
 
 # Actual Project Video
-[![CurrencyCOnv](https://img.shields.io/badge/Click_Here-App_Demo_Video_App-blue)]((https://www.youtube.com/watch?v=CyGodpqcid4&t=3983s&pp=ygUOc2hyYWRoYSBraGFwcmE%3D))
+[![CurrencyCOnv](https://img.shields.io/badge/Click_Here-Project_Video-blue)](https://www.youtube.com/watch?v=CyGodpqcid4&t=3983s&pp=ygUOc2hyYWRoYSBraGFwcmE%3D)
 
 
 ## Project Screenshots
