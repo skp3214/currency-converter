@@ -8,7 +8,7 @@ import arrow from '../src/assets/arrow-right-arrow-left-solid.svg';
 
 const App = () => {
   const BASE_URL =
-    "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies";
+    "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
 
   const [fromCurrency, setFromCurrency] = useState('USD');
   const [toCurrency, setToCurrency] = useState('INR');
@@ -26,16 +26,16 @@ const App = () => {
 
   const updateExchangeRate = async () => {
     try {
-      const URL = `${BASE_URL}/${fromCurrency.toLowerCase()}/${toCurrency.toLowerCase()}.json`;
+      const URL = `${BASE_URL}/${fromCurrency.toLowerCase()}.json`;
       const response = await fetch(URL);
       if(response.ok){
         setdatafetched(response.ok);
       }
       else{
-        setdatafetched(false)
+        setdatafetched(false);
       }
       const data = await response.json();
-      const rate = data[toCurrency.toLowerCase()];
+      const rate = data[fromCurrency.toLowerCase()][toCurrency.toLowerCase()];
       setExchangeRate(rate);
     } catch (error) {
       console.error('Error fetching exchange rate:', error);
@@ -57,7 +57,7 @@ const App = () => {
             updateFlag={updateFlag}
             labelText="From"
           />
-          <img className='arrow' src={arrow} alt="" srcset="" />
+          <img className='arrow' src={arrow} alt=""  />
           <CurrencyDropdown
             currency={toCurrency}
             setCurrency={setToCurrency}
