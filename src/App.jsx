@@ -14,6 +14,7 @@ const App = () => {
   const [toCurrency, setToCurrency] = useState('INR');
   const [amount, setAmount] = useState(1);
   const [exchangeRate, setExchangeRate] = useState(null);
+  const [datafetched, setdatafetched] = useState(true);
 
 
   const updateFlag = (currency, element) => {
@@ -27,6 +28,12 @@ const App = () => {
     try {
       const URL = `${BASE_URL}/${fromCurrency.toLowerCase()}/${toCurrency.toLowerCase()}.json`;
       const response = await fetch(URL);
+      if(response.ok){
+        setdatafetched(response.ok);
+      }
+      else{
+        setdatafetched(false)
+      }
       const data = await response.json();
       const rate = data[toCurrency.toLowerCase()];
       setExchangeRate(rate);
@@ -64,6 +71,7 @@ const App = () => {
           fromCurrency={fromCurrency}
           toCurrency={toCurrency}
           exchangeRate={exchangeRate}
+          datafetched={datafetched}
 
         />
         <button onClick={(e) => { e.preventDefault(); updateExchangeRate(); }}>
